@@ -6,6 +6,7 @@ public class GeneratePlayer
 		static int pickPosition = 0;
 		static int pickCounter = 0;
 		static String teamName = "";
+		static String name = "";
 		static int rosterFull = 0;
 		static String [][]rosterDisplay = {{"2","3","4","5"},{"6","7"},{"8","9","10"},{"11"}};
 		static int [][]rosterOverall = {{2,3,4,5},{6,7},{8,9,10},{11}};
@@ -19,6 +20,8 @@ public class GeneratePlayer
 			Scanner userInput = new Scanner(System.in);
 			System.out.println("Welcome to Soccer Manager");
 			System.out.println("A Beuatifully Crafted Masterpiece by Dunham Perry");
+			System.out.println("What is your name?");
+			name = userInput.nextLine();
 			System.out.println("Pick a Name for Your Team");
 			teamName = userInput.nextLine();
 			System.out.println("Wonderful Choice");
@@ -433,13 +436,14 @@ public class GeneratePlayer
 						}
 						System.out.printf("%-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s\n", position, player.getFirstName(), player.getLastName(), player.getOverall(), player.getPace(), player.getShooting(), player.getPassing(), player.getDribbling(), player.getDefending(), player.getPhysical());
 					}
+					Scanner userInput = new Scanner(System.in);
+					System.out.println("Are you ready to begin the season?");
+					System.out.println("1) Yes");
+					int userAnswer = userInput.nextInt();
+					SeasonView.runner();
 						}
 					} 
 				}
-				public static void test(){
-					System.out.println("test");
-				}
-					
 			}
 				
 
