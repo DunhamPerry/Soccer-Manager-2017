@@ -111,251 +111,361 @@ public class GeneratePlayer
 					switch (rosterDisplay[i][j].length()){
 						case 2:
 							spacesLB = "                   ";
+							break;
 						case 3:
 							spacesLB = "                  ";
+							break;
 						case 4:
 							spacesLB = "                 ";
+							break;
 						case 5:
 							spacesLB = "                ";
+							break;
 						case 6:
 							spacesLB = "               ";
+							break;
 						case 7:
 							spacesLB = "              ";
+							break;
 						case 8:
 							spacesLB = "             ";
+							break;
 						case 9:
 							spacesLB = "            ";
+							break;
 						case 10:
 							spacesLB = "           ";
+							break;
 						case 11:
 							spacesLB = "          ";
+							break;
 						case 12:
 							spacesLB = "         ";
+							break;
 					}
 					String spacesCB = "";
 					switch (rosterDisplay[i][j].length()){
 					case 2:
 						spacesCB = "                   ";
+						break;
 					case 3:
 						spacesCB = "                  ";
+						break;
 					case 4:
 						spacesCB = "                 ";
+						break;
 					case 5:
 						spacesCB = "                ";
+						break;
 					case 6:
 						spacesCB = "               ";
+						break;
 					case 7:
 						spacesCB = "              ";
+						break;
 					case 8:
 						spacesCB = "             ";
+						break;
 					case 9:
 						spacesCB = "            ";
+						break;
 					case 10:
 						spacesCB = "           ";
+						break;
 					case 11:
 						spacesCB = "          ";
+						break;
 					case 12:
 						spacesCB = "         ";
+						break;
 				}
 					String spacesCBB = "";
 					switch (rosterDisplay[i][j].length()){
 					case 2:
 						spacesCBB = "                   ";
+						break;
 					case 3:
 						spacesCBB = "                  ";
+						break;
 					case 4:
 						spacesCBB = "                 ";
+						break;
 					case 5:
 						spacesCBB = "                ";
+						break;
 					case 6:
 						spacesCBB = "               ";
+						break;
 					case 7:
 						spacesCBB = "              ";
+						break;
 					case 8:
 						spacesCBB = "             ";
+						break;
 					case 9:
 						spacesCBB = "            ";
+						break;
 					case 10:
 						spacesCBB = "           ";
+						break;
 					case 11:
 						spacesCBB = "          ";
+						break;
 					case 12:
 						spacesCBB = "         ";
+						break;
 				}
 					String spacesRB = "";
 					switch (rosterDisplay[i][j].length()){
 					case 2:
 						spacesRB = "                   ";
+						break;
 					case 3:
 						spacesRB = "                  ";
+						break;
 					case 4:
 						spacesRB = "                 ";
+						break;
 					case 5:
 						spacesRB = "                ";
+						break;
 					case 6:
 						spacesRB = "               ";
+						break;
 					case 7:
 						spacesRB = "              ";
+						break;
 					case 8:
 						spacesRB = "             ";
+						break;
 					case 9:
 						spacesRB = "            ";
+						break;
 					case 10:
 						spacesRB = "           ";
+						break;
 					case 11:
 						spacesRB = "          ";
+						break;
 					case 12:
 						spacesRB = "         ";
+						break;
 				}
 					String spacesCDM = "";
 					switch (rosterDisplay[i][j].length()){
 					case 2:
 						spacesCDM = "                            ";
+						break;
 					case 3:
 						spacesCDM = "                           ";
+						break;
 					case 4:
 						spacesCDM = "                          ";
+						break;
 					case 5:
 						spacesCDM = "                         ";
+						break;
 					case 6:
 						spacesCDM = "                        ";
+						break;
 					case 7:
 						spacesCDM = "                       ";
+						break;
 					case 8:
 						spacesCDM = "                      ";
+						break;
 					case 9:
 						spacesCDM = "                     ";
+						break;
 					case 10:
 						spacesCDM = "                    ";
+						break;
 					case 11:
 						spacesCDM = "                   ";
+						break;
 					case 12:
 						spacesCDM = "                  ";
+						break;
 				}
 					String spacesCDMM = "";
 					switch (rosterDisplay[i][j].length()){
 					case 2:
 						spacesCDMM = "                            ";
+						break;
 					case 3:
 						spacesCDMM = "                           ";
+						break;
 					case 4:
 						spacesCDMM = "                          ";
+						break;
 					case 5:
 						spacesCDMM = "                         ";
+						break;
 					case 6:
 						spacesCDMM = "                        ";
+						break;
 					case 7:
 						spacesCDMM = "                       ";
+						break;
 					case 8:
 						spacesCDMM = "                      ";
+						break;
 					case 9:
 						spacesCDMM = "                     ";
+						break;
 					case 10:
 						spacesCDMM = "                    ";
+						break;
 					case 11:
 						spacesCDMM = "                   ";
+						break;
 					case 12:
 						spacesCDMM = "                  ";
+						break;
 				}
 					String spacesRAM = "";
 					switch (rosterDisplay[i][j].length()){
 					case 2:
 						spacesRAM = "                            ";
+						break;
 					case 3:
 						spacesRAM = "                           ";
+						break;
 					case 4:
 						spacesRAM = "                          ";
+						break;
 					case 5:
 						spacesRAM = "                         ";
+						break;
 					case 6:
 						spacesRAM = "                        ";
+						break;
 					case 7:
 						spacesRAM = "                       ";
+						break;
 					case 8:
 						spacesRAM = "                      ";
+						break;
 					case 9:
 						spacesRAM = "                     ";
+						break;
 					case 10:
 						spacesRAM = "                    ";
+						break;
 					case 11:
 						spacesRAM = "                   ";
+						break;
 					case 12:
 						spacesRAM = "                  ";
+						break;
 				}
 					String spacesCAM = "";
 					switch (rosterDisplay[i][j].length()){
 					case 2:
 						spacesCAM = "                        ";
+						break;
 					case 3:
 						spacesCAM = "                       ";
+						break;
 					case 4:
-						spacesCAM = "                         ";
+						spacesCAM = "                      ";
+						break;
 					case 5:
 						spacesCAM = "                     ";
+						break;
 					case 6:
 						spacesCAM = "                    ";
+						break;
 					case 7:
 						spacesCAM = "                   ";
+						break;
 					case 8:
 						spacesCAM = "                  ";
+						break;
 					case 9:
-						spacesCAM = "               ";
+						spacesCAM = "                 ";
+						break;
 					case 10:
 						spacesCAM = "                ";
+						break;
 					case 11:
 						spacesCAM = "               ";
+						break;
 					case 12:
 						spacesCAM = "              ";
+						break;
 				}
 					String spacesLAM = "";
 					switch (rosterDisplay[i][j].length()){
 					case 2:
 						spacesLAM = "                           ";
+						break;
 					case 3:
 						spacesLAM = "                          ";
+						break;
 					case 4:
-						spacesLAM = "                            ";
+						spacesLAM = "                         ";
+						break;
 					case 5:
-						spacesLAM = "                                ";
+						spacesLAM = "                        ";
+						break;
 					case 6:
-						spacesLAM = "                          ";
+						spacesLAM = "                       ";
+						break;
 					case 7:
 						spacesLAM = "                      ";
+						break;
 					case 8:
-						spacesLAM = "                   ";
+						spacesLAM = "                     ";
+						break;
 					case 9:
 						spacesLAM = "                    ";
+						break;
 					case 10:
 						spacesLAM = "                   ";
+						break;
 					case 11:
 						spacesLAM = "                  ";
+						break;
 					case 12:
 						spacesLAM = "                 ";
+						break;
 				}
 					String spacesST = "";
 					switch (rosterDisplay[i][j].length()){
 					case 2:
 						spacesST = "              ";
+						break;
 					case 3:
 						spacesST = "             ";
+						break;
 					case 4:
 						spacesST = "            ";
+						break;
 					case 5:
 						spacesST = "           ";
+						break;
 					case 6:
 						spacesST = "          ";
+						break;
 					case 7:
 						spacesST = "         ";
+						break;
 					case 8:
 						spacesST = "        ";
+						break;
 					case 9:
 						spacesST = "       ";
+						break;
 					case 10:
 						spacesST = "      ";
+						break;
 					case 11:
 						spacesST = "     ";
+						break;
 					case 12:
 						spacesST = "    ";
+						break;
 				}
 					
 					System.out.println();
@@ -436,12 +546,12 @@ public class GeneratePlayer
 						}
 						System.out.printf("%-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s\n", position, player.getFirstName(), player.getLastName(), player.getOverall(), player.getPace(), player.getShooting(), player.getPassing(), player.getDribbling(), player.getDefending(), player.getPhysical());
 					}
+						}
 					Scanner userInput = new Scanner(System.in);
 					System.out.println("Are you ready to begin the season?");
 					System.out.println("1) Yes");
 					int userAnswer = userInput.nextInt();
 					seasonRunner();
-						}
 					} 
 				}
 				public static void seasonRunner(){

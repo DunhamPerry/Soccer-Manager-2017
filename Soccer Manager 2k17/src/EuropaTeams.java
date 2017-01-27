@@ -24,4 +24,5 @@ public int getClubOverall() {
 public void setClubOverall(int clubOverall) {
 	this.clubOverall = clubOverall;
 }
+
 }
