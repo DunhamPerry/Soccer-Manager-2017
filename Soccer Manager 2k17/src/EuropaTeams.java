@@ -7,8 +7,6 @@ public class EuropaTeams {
 public EuropaTeams(String cn, int co){
 	clubName = cn;
 	clubOverall = co;
-	
-
 }
 
 public String getClubName() {

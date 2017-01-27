@@ -3,8 +3,6 @@ import java.util.ArrayList;
 public class generateSchedule {
 	static ArrayList<LeagueTeams> Team = new ArrayList<LeagueTeams>();
 	static ArrayList<EuropaTeams> ContinentalTeam = new ArrayList<EuropaTeams>();
-	static String[] europaTeams = {"Benfica","Dortmund","Paris SG","Barcelona","Bayern Munich","Arsenal","Real Madrid","Napoli",
-								   "Tottenham","Atletico Madrid","Manchester City","Monaco","Juventus",""};
 	
 	public static void main(String[] args) {
 		leagueCompetition();

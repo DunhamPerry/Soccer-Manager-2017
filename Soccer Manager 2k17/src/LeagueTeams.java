@@ -7,8 +7,6 @@
 	public LeagueTeams(String cn, int co){
 		clubName = cn;
 		clubOverall = co;
-		
-
 }
 
 	public String getClubName() {
