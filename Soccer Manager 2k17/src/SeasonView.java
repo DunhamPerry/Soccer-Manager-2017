@@ -16,12 +16,12 @@ public class SeasonView
 			System.out.println("You advance by winning games and the last team standing is crowned Champions and gets a large parade");
 			System.out.println("The final competition is the Europa Cup, a tournament competition against the best teams on the continent");
 			System.out.println("You can probably guess by now that the winner gets a parade");
-			System.out.println();
 			menu();
 		}
 		public static void menu(){
 			Scanner userInput = new Scanner(System.in);
-			System.out.println("What do you want to do first?");
+			System.out.println();
+			System.out.println("What do you want to do?");
 			System.out.println("1) Simulate to the next game");
 			System.out.println("2) Look at your roster");
 			System.out.println("3) Look at the League Table");
@@ -30,7 +30,7 @@ public class SeasonView
 			int userAnswer = userInput.nextInt();
 			switch(userAnswer){
 				case 1:
-					//add Simulate
+					nextGame();
 					break;
 				case 2:
 					roster();
@@ -39,13 +39,17 @@ public class SeasonView
 					leagueTable();
 					break;
 				case 4:
-					//League Cup Standings
+					leagueCupStandings();
 					break;
 				case 5:
-					//Europa Cup Standings
+					europaCupStandings();
 					break;
 			}
 			
+		}
+		public static void nextGame(){
+			
+			menu();
 		}
 		public static void roster(){
 			int counter = 0;
@@ -548,6 +552,15 @@ public class SeasonView
 			System.out.println("|----------------------------------------------------------------------|");
 			System.out.println("|  20 |                                                                |");
 			System.out.println("|----------------------------------------------------------------------|");
+			menu();
+		}
+		public static void leagueCupStandings(){
+			System.out.println("                         LEAGUE CUP STANDINGS                          ");
+			System.out.println("");
+			menu();
+		}
+		public static void europaCupStandings(){
+			System.out.println("                         EUROPA CUP STANDINGS                          ");
 			menu();
 		}
 
