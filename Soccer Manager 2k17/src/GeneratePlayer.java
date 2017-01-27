@@ -440,9 +440,12 @@ public class GeneratePlayer
 					System.out.println("Are you ready to begin the season?");
 					System.out.println("1) Yes");
 					int userAnswer = userInput.nextInt();
-					SeasonView.runner();
+					seasonRunner();
 						}
 					} 
+				}
+				public static void seasonRunner(){
+					SeasonView.runner();
 				}
 			}
 				
