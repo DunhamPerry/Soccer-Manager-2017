@@ -1,9 +1,9 @@
 
 public class LeagueTeams{
 
-		private String clubName;
+		private static String clubName;
 		private int clubOverall;
-		private int points;
+		private static int points;
 
 	public LeagueTeams(String cn, int co, int p){
 		clubName = cn;
@@ -11,7 +11,7 @@ public class LeagueTeams{
 		points = p;
 }
 
-	public String getClubName() {
+	public static String getClubName() {
 		return clubName;
 	}
 
@@ -27,7 +27,7 @@ public class LeagueTeams{
 		this.clubOverall = clubOverall;
 	}
 	
-	public int getPoints() {
+	public static int getPoints() {
 		return points;
 	}
 	

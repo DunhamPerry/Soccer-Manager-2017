@@ -5,6 +5,7 @@ public class generateSchedule {
 	static ArrayList<EuropaTeams> ContinentalTeam = new ArrayList<EuropaTeams>();
 	
 	public static void main(String[] args) {
+		generateTeams();
 		leagueCompetition();
 		leagueCupCompetition();
 		europaCupCompetition();
@@ -52,7 +53,7 @@ public class generateSchedule {
 		
 	}
 	public static void europaCupCompetition(){
-		
+		SeasonView.runner();
 	}
 
 }

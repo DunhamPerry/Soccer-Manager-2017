@@ -5,7 +5,7 @@ public class SeasonView
 
 		public static void main(String[] args)
 			{
-
+				menu();
 			}
 		public static void runner(){
 			System.out.println("Welcome " + GeneratePlayer.name + " to your first season in charge of " + GeneratePlayer.teamName);
@@ -511,47 +511,20 @@ public class SeasonView
 		}
 		public static void leagueTable(){
 			System.out.println("                         PREMIER LEAGUE TABLE                         ");
-			System.out.println(" ----------------------------------------------------------------------");
-			System.out.println("|  1  |                                                                |");
-			System.out.println("|----------------------------------------------------------------------|");
-			System.out.println("|  2  |                                                                |");
-			System.out.println("|----------------------------------------------------------------------|");
-			System.out.println("|  3  |                                                                |");
-			System.out.println("|----------------------------------------------------------------------|");
-			System.out.println("|  4  |                                                                |");
-			System.out.println("|----------------------------------------------------------------------|");
-			System.out.println("|  5  |                                                                |");
-			System.out.println("|----------------------------------------------------------------------|");
-			System.out.println("|  6  |                                                                |");
-			System.out.println("|----------------------------------------------------------------------|");
-			System.out.println("|  7  |                                                                |");
-			System.out.println("|----------------------------------------------------------------------|");
-			System.out.println("|  8  |                                                                |");
-			System.out.println("|----------------------------------------------------------------------|");
-			System.out.println("|  9  |                                                                |");
-			System.out.println("|----------------------------------------------------------------------|");
-			System.out.println("|  10 |                                                                |");
-			System.out.println("|----------------------------------------------------------------------|");
-			System.out.println("|  11 |                                                                |");
-			System.out.println("|----------------------------------------------------------------------|");
-			System.out.println("|  12 |                                                                |");
-			System.out.println("|----------------------------------------------------------------------|");
-			System.out.println("|  13 |                                                                |");
-			System.out.println("|----------------------------------------------------------------------|");
-			System.out.println("|  14 |                                                                |");
-			System.out.println("|----------------------------------------------------------------------|");
-			System.out.println("|  15 |                                                                |");
-			System.out.println("|----------------------------------------------------------------------|");
-			System.out.println("|  16 |                                                                |");
-			System.out.println("|----------------------------------------------------------------------|");
-			System.out.println("|  17 |                                                                |");
-			System.out.println("|----------------------------------------------------------------------|");
-			System.out.println("|  18 |                                                                |");
-			System.out.println("|----------------------------------------------------------------------|");
-			System.out.println("|  19 |                                                                |");
-			System.out.println("|----------------------------------------------------------------------|");
-			System.out.println("|  20 |                                                                |");
-			System.out.println("|----------------------------------------------------------------------|");
+			System.out.print("|----------------------------------------------------------------------");
+			
+			for(int x = 1; x < 20; x++){
+				int counter = 0;
+				System.out.println("|");
+				System.out.printf("%-2s, %-5s", "| ", x);
+				System.out.print("| ");
+				System.out.printf("%-51s", generateSchedule.Team.get(counter).getClubName());
+				System.out.print("|   ");
+				System.out.printf("%-5s", generateSchedule.Team.get(counter).getPoints());
+				System.out.println("|");
+				System.out.println("|----------------------------------------------------------------------|");
+				counter++;
+			}
 			menu();
 		}
 		public static void leagueCupStandings(){
