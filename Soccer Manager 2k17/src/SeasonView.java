@@ -5,7 +5,7 @@ public class SeasonView
 
 		public static void main(String[] args)
 			{
-				menu();
+				generateSchedule.generateTeams();
 			}
 		public static void runner(){
 			System.out.println("Welcome " + GeneratePlayer.name + " to your first season in charge of " + GeneratePlayer.teamName);
@@ -510,15 +510,15 @@ public class SeasonView
 			menu();
 		}
 		public static void leagueTable(){
+			int counter = 0;
 			System.out.println("                         PREMIER LEAGUE TABLE                         ");
-			System.out.print("|----------------------------------------------------------------------");
+			System.out.println("|----------------------------------------------------------------------|");
 			
-			for(int x = 1; x < 20; x++){
-				int counter = 0;
-				System.out.println("|");
-				System.out.printf("%-2s, %-5s", "| ", x);
+			for(int x = 1; x < generateSchedule.Team.size() +1; x++){
+				System.out.print("|  ");
+				System.out.printf("%-3s", x);
 				System.out.print("| ");
-				System.out.printf("%-51s", generateSchedule.Team.get(counter).getClubName());
+				System.out.printf("%-54s", generateSchedule.Team.get(counter).getClubName());
 				System.out.print("|   ");
 				System.out.printf("%-5s", generateSchedule.Team.get(counter).getPoints());
 				System.out.println("|");

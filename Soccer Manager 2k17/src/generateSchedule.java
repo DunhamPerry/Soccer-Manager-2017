@@ -30,6 +30,7 @@ public class generateSchedule {
 		Team.add(new LeagueTeams("Crystal Palace", 40, 0));
 		Team.add(new LeagueTeams("Watford", 40, 0));
 		Team.add(new LeagueTeams("Middlesbrough", 50, 0));
+		Team.add(new LeagueTeams(GeneratePlayer.teamName, GeneratePlayer.teamOverall, 0));
 		ContinentalTeam.add(new EuropaTeams("Benfica", 80));
 		ContinentalTeam.add(new EuropaTeams("Dortmund", 80));
 		ContinentalTeam.add(new EuropaTeams("Paris SG", 80));
@@ -45,6 +46,7 @@ public class generateSchedule {
 		ContinentalTeam.add(new EuropaTeams("Juventus", 95));
 		ContinentalTeam.add(new EuropaTeams("Sevilla", 80));
 		ContinentalTeam.add(new EuropaTeams("Leicester", 60));
+		SeasonView.runner();
 	}
 	public static void leagueCompetition(){
 		

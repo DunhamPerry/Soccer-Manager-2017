@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class GeneratePlayer
 	{
+		static int teamOverall = 0;
 		static int pickPosition = 0;
 		static int pickCounter = 0;
 		static String teamName = "";
@@ -544,8 +545,10 @@ public class GeneratePlayer
 						else if (player.getPosition() == 10){
 							position = "ST";
 						}
+						teamOverall = teamOverall + player.getOverall();
 						System.out.printf("%-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s\n", position, player.getFirstName(), player.getLastName(), player.getOverall(), player.getPace(), player.getShooting(), player.getPassing(), player.getDribbling(), player.getDefending(), player.getPhysical());
 					}
+					teamOverall = teamOverall / 10;
 						}
 					Scanner userInput = new Scanner(System.in);
 					System.out.println("Are you ready to begin the season?");
