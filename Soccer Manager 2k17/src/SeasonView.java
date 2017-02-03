@@ -48,8 +48,8 @@ public class SeasonView
 			
 		}
 		public static void nextGame(){
-			
-			menu();
+			//LeagueGameStart.otherTeamPoints();
+			LeagueGameStart.gameRunner();
 		}
 		public static void roster(){
 			int counter = 0;

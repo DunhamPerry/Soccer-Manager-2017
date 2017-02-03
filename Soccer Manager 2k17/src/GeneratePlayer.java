@@ -558,7 +558,7 @@ public class GeneratePlayer
 					} 
 				}
 				public static void seasonRunner(){
-					SeasonView.runner();
+					generateSchedule.generateTeams();
 				}
 			}
 				
