@@ -50,7 +50,7 @@ public class GeneratePlayer
 						int overallGenerator = (paceGenerator + shootingGenerator + passingGenerator + dribblingGenerator + defendingGenerator + physicalGenerator) / 6;
 				
 						
-						draftPicks.add(new Player(firstNameGenerator, lastNameGenerator, overallGenerator,paceGenerator, passingGenerator, dribblingGenerator, defendingGenerator, physicalGenerator, physicalGenerator));
+						draftPicks.add(new Player(firstNameGenerator, lastNameGenerator, overallGenerator,paceGenerator, shootingGenerator, passingGenerator, dribblingGenerator, defendingGenerator, physicalGenerator));
 						}
 						
 					
@@ -68,7 +68,7 @@ public class GeneratePlayer
 					for (int i = 0; i < draftPicks.size(); i++){
 					System.out.printf("%-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s\n", counter, draftPicks.get(i).getFirstName(), draftPicks.get(i).getLastName(), draftPicks.get(i).getOverall(), draftPicks.get(i).getPace(), draftPicks.get(i).getShooting(), draftPicks.get(i).getPassing(), draftPicks.get(i).getDribbling(), draftPicks.get(i).getDefending(), draftPicks.get(i).getPhysical());
 					counter++;
-					delay();
+					//delay();
 					}
 					counter = 1;
 					System.out.println();
