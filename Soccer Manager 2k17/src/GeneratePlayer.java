@@ -64,11 +64,11 @@ public class GeneratePlayer
 				}
 				
 				public static void printList(){
-					System.out.printf("%-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s\n", "Number", "First Name", "Last Name", "Overall", "Pace", "Shooting", "Passing", "Dribbling", "Defending", "Physical");
+					System.out.printf("%-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s\n", "NUMBER", "FIRST NAME", "LAST NAME", "OVERALL", "PACE", "SHOOTING", "PASSING", "DRIBBLING", "DEFENDING", "PHYSICAL");
 					for (int i = 0; i < draftPicks.size(); i++){
 					System.out.printf("%-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s\n", counter, draftPicks.get(i).getFirstName(), draftPicks.get(i).getLastName(), draftPicks.get(i).getOverall(), draftPicks.get(i).getPace(), draftPicks.get(i).getShooting(), draftPicks.get(i).getPassing(), draftPicks.get(i).getDribbling(), draftPicks.get(i).getDefending(), draftPicks.get(i).getPhysical());
 					counter++;
-					//delay();
+					delay();
 					}
 					counter = 1;
 					System.out.println();
@@ -80,7 +80,7 @@ public class GeneratePlayer
 					System.out.println("Pick a " + position[pickPosition]);
 					Scanner userInput = new Scanner(System.in);
 					int playerDraft = userInput.nextInt();
-					Roster.add(new TeamPlayer(draftPicks.get(playerDraft - 1).getFirstName(), draftPicks.get(playerDraft - 1).getLastName(), pickPosition + 1, draftPicks.get(playerDraft - 1).getOverall(),draftPicks.get(playerDraft - 1).getPace(), draftPicks.get(playerDraft - 1).getPassing(), draftPicks.get(playerDraft - 1).getShooting(), draftPicks.get(playerDraft - 1).getDribbling(), draftPicks.get(playerDraft - 1).getDefending(), draftPicks.get(playerDraft - 1).getPhysical()));
+					Roster.add(new TeamPlayer(draftPicks.get(playerDraft - 1).getFirstName(), draftPicks.get(playerDraft - 1).getLastName(), pickPosition + 1, draftPicks.get(playerDraft - 1).getOverall(),draftPicks.get(playerDraft - 1).getPace(), draftPicks.get(playerDraft - 1).getShooting(), draftPicks.get(playerDraft - 1).getPassing(), draftPicks.get(playerDraft - 1).getDribbling(), draftPicks.get(playerDraft - 1).getDefending(), draftPicks.get(playerDraft - 1).getPhysical()));
 					draftPicks.clear();
 					pickPosition++;
 					rosterFull++;
@@ -165,7 +165,7 @@ public class GeneratePlayer
 					System.out.println("|_________________________|__________|_______________________|");
 					System.out.println();
 					System.out.println("STATISTICAL VIEW");
-					System.out.printf("%-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s\n", "POSITION", "FIRST NAME", "LAST NAME", "OVERALL", "PACE", "SHOOTING", "PASSING", "PASSING", "DRIBBLING", "DEFENDING", "PHYSICAL");
+					System.out.printf("%-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s\n", "POSITION", "FIRST NAME", "LAST NAME", "OVERALL", "PACE", "SHOOTING", "PASSING", "DRIBBLING", "DEFENDING", "PHYSICAL");
 					for(TeamPlayer player: Roster){
 						String position = "";
 						if (player.getPosition() == 1){
