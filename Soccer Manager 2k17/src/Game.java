@@ -15,7 +15,8 @@ public class Game
 		for (int y = 0; y < 1; y++){
 			for (int x = 0; x < (int)(Math.random()*6)+1; x++){
 			longDelay();
-			switch((int)(Math.random()*5)+1){
+			//switch((int)(Math.random()*5)+1){
+			switch(1){
 				case 1:
 					//user striker shot outside the box
 					System.out.println(GeneratePlayer.rosterDisplay[3][0] + " is dribbling outside the box");
@@ -29,31 +30,27 @@ public class Game
 						delay();
 						System.out.println(GeneratePlayer.rosterDisplay[3][0] + " will have to do much better than that if he wants to score!");
 						delay();
-						System.out.println(GeneratePlayer.teamName + " - " + userPoints);
-						System.out.println(enemyTeamName + " - " + enemyPoints);
+						scoreboard();
 					}
 					else if (GeneratePlayer.Roster.get(9).getShooting() < (Math.random()*60)+40){
 						System.out.println("The ball is shot right into the goalie's path");
 						delay();
 						System.out.println("The goalkeeper catches it and clutches it to his chest");
 						delay();
-						System.out.println(GeneratePlayer.teamName + " - " + userPoints);
-						System.out.println(enemyTeamName + " - " + enemyPoints);
+						scoreboard();
 					}
 					else if (GeneratePlayer.Roster.get(9).getShooting() < (Math.random()*40)+60){
 						System.out.println("The ball strikes the crossbar! What a close effort");
 						delay();
 						System.out.println(GeneratePlayer.rosterDisplay[3][0] + " with an almost incredible goal from outside the box!");
 						delay();
-						System.out.println(GeneratePlayer.teamName + " - " + userPoints);
-						System.out.println(enemyTeamName + " - " + enemyPoints);
+						scoreboard();
 					}
 					else {
 						System.out.println(GeneratePlayer.rosterDisplay[3][0] + " scores! what a goal!");
 						userPoints++;
 						delay();
-						System.out.println(GeneratePlayer.teamName + " - " + userPoints);
-						System.out.println(enemyTeamName + " - " + enemyPoints);
+						scoreboard();
 					}
 					break;
 				case 2:
@@ -291,7 +288,81 @@ public class Game
 					break;
 				case 6:
 					//through ball
-					System.out.println("Case 6");
+					System.out.println(GeneratePlayer.rosterDisplay[2][1] + " has the ball at midfield");
+					delay();
+					System.out.println("The enemy players are closing in");
+					delay();
+					System.out.println(GeneratePlayer.rosterDisplay[3][0] + " is making run past the defenders");
+					delay();
+					System.out.println(GeneratePlayer.rosterDisplay[2][1] + " passes the ball through the defense...");
+					delay();
+					
+					if (GeneratePlayer.Roster.get(9).getPace() < (Math.random()*50)+50){
+						System.out.println(GeneratePlayer.rosterDisplay[3][0] + " is offsides, the ball is turned over");
+						delay();
+						System.out.println(GeneratePlayer.teamName + " - " + userPoints);
+						System.out.println(enemyTeamName + " - " + enemyPoints);
+					}
+					else {
+						System.out.println("The referree keeps his flag down. " + GeneratePlayer.rosterDisplay[3][0] + " is onsides");
+						delay();
+						
+						if (GeneratePlayer.Roster.get(7).getPassing() < (Math.random()*90)+10){
+							System.out.println("The ball is passed right into the defense. The enemy is on a fast break");
+							delay();
+							System.out.println(GeneratePlayer.teamName + " - " + userPoints);
+							System.out.println(enemyTeamName + " - " + enemyPoints);
+						}
+						else if (GeneratePlayer.Roster.get(7).getPassing() < (Math.random()*60)+40){
+							System.out.println("The pass is from " + GeneratePlayer.rosterDisplay[2][1] + " is too far and the goalie collects it");
+							delay();
+							System.out.println(GeneratePlayer.teamName + " - " + userPoints);
+							System.out.println(enemyTeamName + " - " + enemyPoints);
+						}
+						else if (GeneratePlayer.Roster.get(7).getPassing() < (Math.random()*40)+60){
+							System.out.println("The ball is just past " + GeneratePlayer.rosterDisplay[3][0] + " and goes out of play");
+							delay();
+							System.out.println(GeneratePlayer.teamName + " - " + userPoints);
+							System.out.println(enemyTeamName + " - " + enemyPoints);
+						}
+						else {
+							System.out.println(GeneratePlayer.rosterDisplay[2][1] + " gives a perfect pass down through the center");
+							delay();
+							System.out.println(GeneratePlayer.rosterDisplay[3][0] + " collects the ball and turns towards goal");
+							delay();
+							System.out.println(GeneratePlayer.rosterDisplay[3][0] + " shoots...");
+							
+							if (GeneratePlayer.Roster.get(9).getShooting() < (Math.random()*90)+10){
+								System.out.println("The ball flies over the net into the stands. No goal");
+								delay();
+								System.out.println(GeneratePlayer.teamName + " - " + userPoints);
+								System.out.println(enemyTeamName + " - " + enemyPoints);
+							}
+							else if (GeneratePlayer.Roster.get(9).getShooting() < (Math.random()*60)+40){
+								System.out.println("The ball flies towards the net...");
+								delay();
+								System.out.println("The goalkeeper makes a save to keep the ball out");
+								System.out.println(GeneratePlayer.teamName + " - " + userPoints);
+								System.out.println(enemyTeamName + " - " + enemyPoints);
+							}
+							else if (GeneratePlayer.Roster.get(9).getShooting() < (Math.random()*40)+60){
+								System.out.println("The ball flies towards the net...");
+								delay();
+								System.out.println("The ball smacks against the post. No goal");
+								System.out.println(GeneratePlayer.teamName + " - " + userPoints);
+								System.out.println(enemyTeamName + " - " + enemyPoints);
+							}
+							else {
+								System.out.println("The ball flies towards the net...");
+								delay();
+								System.out.println("GOOOOOOOAL! " + GeneratePlayer.rosterDisplay[3][0] + " has scored a goal for " + GeneratePlayer.teamName);
+								delay();
+								userPoints++;
+								System.out.println(GeneratePlayer.teamName + " - " + userPoints);
+								System.out.println(enemyTeamName + " - " + enemyPoints);
+							}
+						}
+					}
 					break;
 				case 7:
 					//cross inside box
@@ -320,6 +391,19 @@ public class Game
 				}
 			}
 			//}
+		
+		public static void scoreboard(){
+			System.out.println();
+			System.out.println("-----------------------------------------");
+			System.out.print("|      ");
+			System.out.printf("%-10s", GeneratePlayer.teamName);
+			System.out.print("   |      ");
+			System.out.printf("%-10s", enemyTeamName);
+	        System.out.println("   |");
+	        System.out.println("|         " + userPoints + "         |         " + enemyPoints + "         |");
+	        System.out.println("-----------------------------------------");
+	        System.out.println();
+		}
 		
 		public static void delay()
 			{
