@@ -4,11 +4,13 @@ public class LeagueTeams{
 		private String clubName;
 		private int clubOverall;
 		private int points;
+		private String clubInitials;
 
-	public LeagueTeams(String cn, int co, int p){
+	public LeagueTeams(String cn, int co, int p, String ci){
 		clubName = cn;
 		clubOverall = co;
 		points = p;
+		clubInitials = ci;
 }
 
 	public String getClubName()
@@ -39,6 +41,16 @@ public class LeagueTeams{
 	public void setPoints(int points)
 		{
 			this.points = points;
+		}
+	
+	public String getClubInitials()
+		{
+			return clubInitials;
+		}
+
+	public void setBlubInitials(String clubInitials)
+		{
+			this.clubInitials = clubInitials;
 		}
 
 }
