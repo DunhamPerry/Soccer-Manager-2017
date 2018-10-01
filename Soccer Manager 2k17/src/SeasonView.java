@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class SeasonView
 	{
-
+		static int numberOfGamesPlayed = 0;
+		static String[] results = {" "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "};
 		public static void main(String[] args)
 			{
 				generateSchedule.generateTeams();
@@ -22,11 +23,12 @@ public class SeasonView
 			Scanner userInput = new Scanner(System.in);
 			System.out.println();
 			System.out.println("What do you want to do?");
-			System.out.println("1) Simulate to the next game");
-			System.out.println("2) Look at your roster");
-			System.out.println("3) Look at the League Table");
-			System.out.println("4) Look at the League Cup Standings");
-			System.out.println("5) Look at the Europa Cup Standings");
+			System.out.println("1) NEXT GAME");
+			System.out.println("2) ROSTER");
+			System.out.println("3) STANDINGS");
+			System.out.println("4) SCHEDULE");
+			//System.out.println("5) Look at the League Cup Standings");
+			//System.out.println("6) Look at the Europa Cup Standings");
 			int userAnswer = userInput.nextInt();
 			switch(userAnswer){
 				case 1:
@@ -39,9 +41,12 @@ public class SeasonView
 					leagueTable();
 					break;
 				case 4:
-					leagueCupStandings();
+					schedule();
 					break;
 				case 5:
+					leagueCupStandings();
+					break;
+				case 6:
 					europaCupStandings();
 					break;
 			}
@@ -177,6 +182,21 @@ public class SeasonView
 				counter++;
 			}
 			menu();
+		}
+		public static void schedule(){
+			int subtractor = 0;
+			String columnAdjuster = " ";
+			System.out.println("SCHEDULE");
+			System.out.println("WEEK    RESULT    OPPONENT");
+			for (int i = 0; i < 38; i++){
+			if (i > 8){
+				columnAdjuster = "";
+			}
+			if (i > 18){
+				subtractor = 19;
+			}
+			System.out.println(" "+(i+1)+"     " + columnAdjuster + results[i] + "         "+generateSchedule.Team.get(i-subtractor).getClubName());
+			}
 		}
 		public static void leagueCupStandings(){
 			System.out.println("                         LEAGUE CUP STANDINGS                          ");

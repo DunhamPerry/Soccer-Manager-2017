@@ -46,6 +46,7 @@ public class generateSchedule {
 		leagueCompetition();
 	}
 	public static void leagueCompetition(){
+		
 		leagueCupCompetition();
 	}
 	public static void leagueCupCompetition(){
