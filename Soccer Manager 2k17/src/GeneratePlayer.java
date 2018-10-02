@@ -6,7 +6,7 @@ public class GeneratePlayer
 		static int teamOverall = 0;
 		static int pickPosition = 0;
 		static int pickCounter = 0;
-		static int team;
+		static String team;
 		static int rosterFull = 0;
 		static String [][]rosterDisplay = {{"2","3","4","5"},{"6","7"},{"8","9","10"},{"11"}};
 		static int [][]rosterOverall = {{2,3,4,5},{6,7},{8,9,10},{11}};
