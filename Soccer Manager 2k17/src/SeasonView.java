@@ -6,10 +6,10 @@ public class SeasonView
 		static String[] results = {" "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "};
 		public static void main(String[] args)
 			{
-				generateSchedule.generateTeams();
+				GenerateSchedule.generateTeams();
 			}
 		public static void runner(){
-			System.out.println("Welcome " + GeneratePlayer.name + " to your first season in charge of " + GeneratePlayer.teamName);
+			//System.out.println("Welcome " + GeneratePlayer.name + " to your first season in charge of " + GeneratePlayer.teamName);
 			System.out.println("There are three competitions to compete for this season");
 			System.out.println("The League Competition is where every team in a league plays each other twice and gains 3 points for a win, 1 for a draw, and none for a loss");
 			System.out.println("The team with the most points at the end of the season is crowned Champions and gets a large parade");
@@ -170,13 +170,13 @@ public class SeasonView
 			System.out.println("                         PREMIER LEAGUE TABLE                         ");
 			System.out.println("|----------------------------------------------------------------------|");
 			
-			for(int x = 1; x < generateSchedule.Team.size() +1; x++){
+			for(int x = 1; x < GenerateSchedule.team.size() +1; x++){
 				System.out.print("|  ");
 				System.out.printf("%-3s", x);
 				System.out.print("| ");
-				System.out.printf("%-54s", generateSchedule.Team.get(counter).getClubName());
+				System.out.printf("%-54s", GenerateSchedule.team.get(counter).getClubName());
 				System.out.print("|   ");
-				System.out.printf("%-5s", generateSchedule.Team.get(counter).getPoints());
+				System.out.printf("%-5s", GenerateSchedule.team.get(counter).getPoints());
 				System.out.println("|");
 				System.out.println("|----------------------------------------------------------------------|");
 				counter++;
@@ -195,7 +195,7 @@ public class SeasonView
 			if (i > 18){
 				subtractor = 19;
 			}
-			System.out.println(" "+(i+1)+"     " + columnAdjuster + results[i] + "         "+generateSchedule.Team.get(i-subtractor).getClubName());
+			System.out.println(" "+(i+1)+"     " + columnAdjuster + results[i] + "         "+GenerateSchedule.team.get(i-subtractor).getClubName());
 			}
 		}
 		public static void leagueCupStandings(){

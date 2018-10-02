@@ -10,8 +10,8 @@ public class LeagueGameStart
 		public static void otherTeamPoints(){
 			for(int i = 0; i < 19; i++){
 				int pointBoundary = (int)(Math.random()*100)+1;
-				if (pointBoundary < (generateSchedule.Team.get(i).getClubOverall() - 40)){
-				generateSchedule.Team.set(i, null).setPoints(3);
+				if (pointBoundary < (GenerateSchedule.team.get(i).getClubOverall() - 40)){
+				GenerateSchedule.team.set(i, null).setPoints(3);
 				SeasonView.leagueTable();
 				}
 			}

@@ -3,8 +3,8 @@ public class Game
 	{
 		static int userPoints = 0;
 		static int enemyPoints = 0;
-		static String enemyTeamName = generateSchedule.Team.get(LeagueGameStart.randomTeam).getClubInitials();
-		static String enemyTeamNameFull = generateSchedule.Team.get(LeagueGameStart.randomTeam).getClubName();
+		static String enemyTeamName = GenerateSchedule.team.get(LeagueGameStart.randomTeam).getClubInitials();
+		static String enemyTeamNameFull = GenerateSchedule.team.get(LeagueGameStart.randomTeam).getClubName();
 		public static void main(String[] args){
 		
 		}

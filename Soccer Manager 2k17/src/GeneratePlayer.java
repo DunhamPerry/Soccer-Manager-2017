@@ -6,8 +6,7 @@ public class GeneratePlayer
 		static int teamOverall = 0;
 		static int pickPosition = 0;
 		static int pickCounter = 0;
-		static String teamName = "";
-		static String name = "";
+		static int team;
 		static int rosterFull = 0;
 		static String [][]rosterDisplay = {{"2","3","4","5"},{"6","7"},{"8","9","10"},{"11"}};
 		static int [][]rosterOverall = {{2,3,4,5},{6,7},{8,9,10},{11}};
@@ -18,13 +17,18 @@ public class GeneratePlayer
 		static int counter = 1;
 		
 		public static void main(String[] args){
+			GenerateSchedule.generateTeams();
+		}
+		public static void runner(){
 			Scanner userInput = new Scanner(System.in);
-			System.out.println("Welcome to Soccer Manager");
-			System.out.println("A Beuatifully Crafted Masterpiece by Dunham Perry");
-			System.out.println("What is your name?");
-			name = userInput.nextLine();
-			System.out.println("Pick a Name for Your Team");
-			teamName = userInput.nextLine();
+			System.out.println("Welcome to The World Cup");
+			System.out.println("A Beautifully Crafted Masterpiece by Dunham Perry");
+			System.out.println("Pick Your Team");
+			for (int i = 0; i < 32; i++){
+				System.out.println((i+1) + ") " + GenerateSchedule.team.get(i).getClubName());
+			}
+			team = userInput.nextInt();
+			
 			System.out.println("Wonderful Choice");
 			System.out.println("Are You Ready to Pick a Team?");
 			System.out.println("1) YES");
@@ -36,7 +40,6 @@ public class GeneratePlayer
 			generatePlayer();
 			}
 		}
-		
 				public static void generatePlayer(){
 					for (int i = 0; i < 10; i++){
 						String firstNameGenerator = NameDatabase.firstNameArray[(int)(Math.random()*160)+1];
@@ -211,7 +214,7 @@ public class GeneratePlayer
 					seasonRunner();
 					} 
 				public static void seasonRunner(){
-					generateSchedule.generateTeams();
+					GenerateSchedule.generateTeams();
 				}
 				public static void delay()
 					{
