@@ -210,7 +210,9 @@ public class GeneratePlayer
 						delay();
 					}
 					teamOverall = teamOverall / 10;
-					System.out.println(teamOverall);	
+					if ((teamOverall%10) < 5) {
+						GenerateSchedule.get(teamNumber-1).setClubOverall(teamOverall-(teamOverall%10));
+					}
 					Scanner userInput = new Scanner(System.in);
 					System.out.println("Are you ready to begin the season?");
 					System.out.println("1) Yes");
