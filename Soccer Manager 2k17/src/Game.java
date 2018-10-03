@@ -3,8 +3,8 @@ public class Game
 	{
 		static int userPoints = 0;
 		static int enemyPoints = 0;
-		static String enemyTeamName = GenerateSchedule.team.get(LeagueGameStart.randomTeam).getClubInitials();
-		static String enemyTeamNameFull = GenerateSchedule.team.get(LeagueGameStart.randomTeam).getClubName();
+		static String enemyTeamName = GenerateSchedule.team.get(LeagueGameStart.opponentNumberCounter).getClubInitials();
+		static String enemyTeamNameFull = GenerateSchedule.team.get(LeagueGameStart.opponentNumberCounter).getClubName();
 		public static void main(String[] args){
 		
 		}
@@ -17,6 +17,13 @@ public class Game
 		for (int y = 0; y < 2; y++){
 			for (int x = 0; x < (int)(Math.random()*6)+1; x++){
 			longDelay();
+			
+			//if (){
+				
+			//}
+			//else{
+				
+			//}
 			switch((int)(Math.random()*7)+1){
 			//switch(7){
 				case 1:
@@ -460,7 +467,7 @@ public class Game
 					System.out.println("The game ends as follows:");
 					scoreboard();
 					if(userPoints > enemyPoints){
-						System.out.println(GeneratePlayer.userTeamName + " are victorious today taking down " + enemyTeamNameFull);
+						System.out.println(GeneratePlayer.userTeamName + " is victorious today taking down " + enemyTeamNameFull);
 					}
 					else if (userPoints == enemyPoints){
 						System.out.println("The game ended in a draw between " + GeneratePlayer.userTeamName + " and " + enemyTeamNameFull);

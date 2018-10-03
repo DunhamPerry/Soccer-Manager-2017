@@ -211,7 +211,7 @@ public class GeneratePlayer
 					}
 					teamOverall = teamOverall / 10;
 					if ((teamOverall%10) < 5) {
-						GenerateSchedule.get(teamNumber-1).setClubOverall(teamOverall-(teamOverall%10));
+						//GenerateSchedule.get(teamNumber-1).setClubOverall(teamOverall-(teamOverall%10));
 					}
 					Scanner userInput = new Scanner(System.in);
 					System.out.println("Are you ready to begin the season?");
