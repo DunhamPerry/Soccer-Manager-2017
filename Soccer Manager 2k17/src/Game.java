@@ -9,7 +9,7 @@ public class Game
 		
 		}
 		public static void intro(){
-			System.out.println("Hello and welcome to a match between " + GeneratePlayer.teamName + " and " + enemyTeamNameFull + ".");
+			System.out.println("Hello and welcome to a match between " + GeneratePlayer.userTeamName + " and " + enemyTeamNameFull + ".");
 			delay();
 			System.out.println("And the teams are looking to kick off");
 			delay();
@@ -134,7 +134,7 @@ public class Game
 					delay();
 					System.out.println(GeneratePlayer.rosterDisplay[2][1] + " steps up to take the shot");
 					delay();
-					System.out.println(GeneratePlayer.teamName.substring(0,3) + " will have a free kick on the edge of the box");
+					System.out.println(GenerateSchedule.team.get(GeneratePlayer.teamNumber-1).getClubInitials() + " will have a free kick on the edge of the box");
 					delay();
 					System.out.println(GeneratePlayer.rosterDisplay[2][1] + " shoots...");
 					if (GeneratePlayer.Roster.get(7).getShooting() < (Math.random()*90)+10){
@@ -182,7 +182,7 @@ public class Game
 					delay();
 					System.out.println("The referee whistles for a penalty");
 					delay();
-					System.out.println(GeneratePlayer.teamName.substring(0,3) + " will have a chance to score from the penalty area");
+					System.out.println(GenerateSchedule.team.get(GeneratePlayer.teamNumber-1).getClubInitials() + " will have a chance to score from the penalty area");
 					delay();
 					System.out.println(GeneratePlayer.rosterDisplay[3][0] + " steps up towards the ball and looks the goalie dead in the eye");
 					delay();
@@ -212,7 +212,7 @@ public class Game
 					else {
 						System.out.println("The ball starts flying towards a corner!");
 						delay();
-						System.out.println("GOOOOOAL! The ball finds the back of the net to give " + GeneratePlayer.teamName.substring(0,3) + " a goal");
+						System.out.println("GOOOOOAL! The ball finds the back of the net to give " + GenerateSchedule.team.get(GeneratePlayer.teamNumber-1).getClubInitials() + " a goal");
 						delay();
 						userPoints++;
 						scoreboard();
@@ -327,7 +327,7 @@ public class Game
 							else {
 								System.out.println("The ball flies towards the net...");
 								delay();
-								System.out.println("GOOOOOOOAL! " + GeneratePlayer.rosterDisplay[3][0] + " has scored a goal for " + GeneratePlayer.teamName.substring(0,3));
+								System.out.println("GOOOOOOOAL! " + GeneratePlayer.rosterDisplay[3][0] + " has scored a goal for " + GenerateSchedule.team.get(GeneratePlayer.teamNumber-1).getClubInitials());
 								delay();
 								userPoints++;
 								scoreboard();
@@ -337,7 +337,7 @@ public class Game
 					break;
 				case 7:
 					//corner
-					System.out.println(GeneratePlayer.teamName.substring(0,3) + " has been awarded a corner kick");
+					System.out.println(GenerateSchedule.team.get(GeneratePlayer.teamNumber-1).getClubInitials() + " has been awarded a corner kick");
 					delay();
 					System.out.println(GeneratePlayer.rosterDisplay[1][1] + " steps up to take it");
 					delay();
@@ -460,13 +460,13 @@ public class Game
 					System.out.println("The game ends as follows:");
 					scoreboard();
 					if(userPoints > enemyPoints){
-						System.out.println(GeneratePlayer.teamName + " are victorious today taking down " + enemyTeamNameFull);
+						System.out.println(GeneratePlayer.userTeamName + " are victorious today taking down " + enemyTeamNameFull);
 					}
 					else if (userPoints == enemyPoints){
-						System.out.println("The game ended in a draw between " + GeneratePlayer.teamName + " and " + enemyTeamNameFull);
+						System.out.println("The game ended in a draw between " + GeneratePlayer.userTeamName + " and " + enemyTeamNameFull);
 					}
 					else {
-						System.out.println(enemyTeamNameFull + " ended up victorious taking down " + GeneratePlayer.teamName);
+						System.out.println(enemyTeamNameFull + " ended up victorious taking down " + GeneratePlayer.userTeamName);
 					}
 					}
 		}
@@ -478,7 +478,7 @@ public class Game
 			System.out.println();
 			System.out.println("-----------------------------------------");
 			System.out.print("|        ");
-			System.out.printf("%-11s", GeneratePlayer.teamName.substring(0,3).toUpperCase());
+			System.out.printf("%-11s", GenerateSchedule.team.get(GeneratePlayer.teamNumber-1).getClubInitials());
 			System.out.print("|        ");
 			System.out.printf("%-11s", enemyTeamName);
 	        System.out.println("|");

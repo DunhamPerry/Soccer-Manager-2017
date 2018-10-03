@@ -12,7 +12,7 @@ public class LeagueGameStart
 				int pointBoundary = (int)(Math.random()*100)+1;
 				if (pointBoundary < (GenerateSchedule.team.get(i).getClubOverall() - 40)){
 				GenerateSchedule.team.set(i, null).setPoints(3);
-				SeasonView.leagueTable();
+				SeasonView.standings();
 				}
 			}
 		}

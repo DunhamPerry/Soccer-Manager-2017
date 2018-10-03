@@ -26,7 +26,6 @@ public class SeasonView
 			System.out.println("1) NEXT GAME");
 			System.out.println("2) ROSTER");
 			System.out.println("3) STANDINGS");
-			System.out.println("4) SCHEDULE");
 			//System.out.println("5) Look at the League Cup Standings");
 			//System.out.println("6) Look at the Europa Cup Standings");
 			int userAnswer = userInput.nextInt();
@@ -38,16 +37,7 @@ public class SeasonView
 					roster();
 					break;
 				case 3:
-					leagueTable();
-					break;
-				case 4:
-					schedule();
-					break;
-				case 5:
-					leagueCupStandings();
-					break;
-				case 6:
-					europaCupStandings();
+					standings();
 					break;
 			}
 			
@@ -65,7 +55,7 @@ public class SeasonView
 				}
 			} 
 			System.out.println();
-			System.out.println("                              "+GeneratePlayer.teamName);
+			System.out.println("                              "+GeneratePlayer.userTeamName);
 			System.out.println(" ____________________________________________________________ ");
 			System.out.println("|                         |          |                       |");
 			System.out.println("|                                                            |");
@@ -165,14 +155,14 @@ public class SeasonView
 			}
 			menu();
 				}
-		public static void leagueTable(){
+		public static void standings(){
 			int counter = 0;
-			System.out.println("                         PREMIER LEAGUE TABLE                         ");
+			for (int i = 0; i < 8; i++) {
+			System.out.println("                             GROUP " + (i+1) +"                                 ");
 			System.out.println("|----------------------------------------------------------------------|");
-			
-			for(int x = 1; x < GenerateSchedule.team.size() +1; x++){
+			for (int x = 0; x < 4; x++) {
 				System.out.print("|  ");
-				System.out.printf("%-3s", x);
+				System.out.printf("%-3s", (x+1));
 				System.out.print("| ");
 				System.out.printf("%-54s", GenerateSchedule.team.get(counter).getClubName());
 				System.out.print("|   ");
@@ -181,22 +171,9 @@ public class SeasonView
 				System.out.println("|----------------------------------------------------------------------|");
 				counter++;
 			}
+			System.out.println();
+			}
 			menu();
-		}
-		public static void schedule(){
-			int subtractor = 0;
-			String columnAdjuster = " ";
-			System.out.println("SCHEDULE");
-			System.out.println("WEEK    RESULT    OPPONENT");
-			for (int i = 0; i < 38; i++){
-			if (i > 8){
-				columnAdjuster = "";
-			}
-			if (i > 18){
-				subtractor = 19;
-			}
-			System.out.println(" "+(i+1)+"     " + columnAdjuster + results[i] + "         "+GenerateSchedule.team.get(i-subtractor).getClubName());
-			}
 		}
 		public static void leagueCupStandings(){
 			System.out.println("                         LEAGUE CUP STANDINGS                          ");

@@ -6,7 +6,8 @@ public class GeneratePlayer
 		static int teamOverall = 0;
 		static int pickPosition = 0;
 		static int pickCounter = 0;
-		static String team;
+		static String userTeamName = "";
+		static int teamNumber;
 		static int rosterFull = 0;
 		static String [][]rosterDisplay = {{"2","3","4","5"},{"6","7"},{"8","9","10"},{"11"}};
 		static int [][]rosterOverall = {{2,3,4,5},{6,7},{8,9,10},{11}};
@@ -27,17 +28,20 @@ public class GeneratePlayer
 			for (int i = 0; i < 32; i++){
 				System.out.println((i+1) + ") " + GenerateSchedule.team.get(i).getClubName());
 			}
-			team = userInput.nextInt();
-			
-			System.out.println("Wonderful Choice");
-			System.out.println("Are You Ready to Pick a Team?");
+			teamNumber = userInput.nextInt();
+			userTeamName = GenerateSchedule.team.get(teamNumber-1).getClubName();
+			System.out.println(userTeamName);
+			System.out.println("Welcome to " + userTeamName);
+			System.out.println("Are You Ready to Pick a Roster?");
 			System.out.println("1) YES");
 			int ready = userInput.nextInt();
 			if (ready == 1){
 			generatePlayer();
+			//SeasonView.runner();
 			}
 			else {
 			generatePlayer();
+			//SeasonView.runner();
 			}
 		}
 				public static void generatePlayer(){
@@ -106,7 +110,7 @@ public class GeneratePlayer
 					}
 				
 					System.out.println();
-					System.out.println("                              "+teamName);
+					System.out.println("                              "+userTeamName);
 					System.out.println(" ____________________________________________________________ ");
 					System.out.println("|                         |          |                       |");
 					System.out.println("|                                                            |");
@@ -206,7 +210,7 @@ public class GeneratePlayer
 						delay();
 					}
 					teamOverall = teamOverall / 10;
-						
+					System.out.println(teamOverall);	
 					Scanner userInput = new Scanner(System.in);
 					System.out.println("Are you ready to begin the season?");
 					System.out.println("1) Yes");
@@ -214,7 +218,7 @@ public class GeneratePlayer
 					seasonRunner();
 					} 
 				public static void seasonRunner(){
-					GenerateSchedule.generateTeams();
+					SeasonView.runner();
 				}
 				public static void delay()
 					{
