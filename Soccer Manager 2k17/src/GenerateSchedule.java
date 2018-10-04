@@ -22,7 +22,7 @@ public class GenerateSchedule {
 		team.add(new LeagueTeams("Australia", 4, 0, "AUS", 1, "C", false));
 		team.add(new LeagueTeams("Croatia", 8, 0, "CRO", 1, "D", false));
 		team.add(new LeagueTeams("Argentina", 9, 0, "ARG", 1, "D", false));
-		team.add(new LeagueTeams("Nigeria", 6, 0, "NIG", 1, "D", false));
+		team.add(new LeagueTeams("Nigeria", 6, 0, "NGA", 1, "D", false));
 		team.add(new LeagueTeams("Iceland", 6, 0, "ICE", 1, "D", false));
 		team.add(new LeagueTeams("Brazil", 9, 0, "BRA", 1, "E", false));
 		team.add(new LeagueTeams("Switzerland", 6, 0, "SWI", 1, "E", false));

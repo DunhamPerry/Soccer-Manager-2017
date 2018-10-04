@@ -3,6 +3,8 @@ public class LeagueGameStart
 	{
 		static int enemyTeam;
 		static int opponentNumberCounter = 0;
+		static int gamesPlayed = 0;
+		static boolean hasDoneAdder = false;
 		public static void main(String[] args)
 			{
 				//otherTeamPoints();
@@ -18,17 +20,12 @@ public class LeagueGameStart
 			}
 		}
 		public static void gameRunner(){
-			int gamesPlayed = 0;
-			boolean hasDoneAdder = false;
+			System.out.println(LeagueGameStart.opponentNumberCounter);
 			int adder = 0;
 			if (gamesPlayed == 3){
 				playoffGame();
 			}
-			else if (GenerateSchedule.team.get(opponentNumberCounter).isPlayer() == true){
-				opponentNumberCounter++;
-				gameRunner();
-			}
-			else if (hasDoneAdder == false) {
+			if (hasDoneAdder == false) {
 				switch (GenerateSchedule.team.get((GeneratePlayer.teamNumber)-1).getGroup()){
 					case "A":
 						break;
@@ -55,13 +52,17 @@ public class LeagueGameStart
 						break;
 				}
 				opponentNumberCounter = opponentNumberCounter + adder;
-				
+				hasDoneAdder = true;
+				gameRunner();
+			}
+			if (GenerateSchedule.team.get(opponentNumberCounter).isPlayer() == true){
+				opponentNumberCounter++;
 			}
 			gamesPlayed++;
 			Game.intro();
 		}
 		private static void playoffGame(){
-			
+			System.out.println("YEET");
 		}
 
 	}

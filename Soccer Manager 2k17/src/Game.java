@@ -3,19 +3,22 @@ public class Game
 	{
 		static int userPoints = 0;
 		static int enemyPoints = 0;
-		static String enemyTeamName = GenerateSchedule.team.get(LeagueGameStart.opponentNumberCounter).getClubInitials();
-		static String enemyTeamNameFull = GenerateSchedule.team.get(LeagueGameStart.opponentNumberCounter).getClubName();
+		static String enemyTeamName;
+		static String enemyTeamNameFull;
 		public static void main(String[] args){
 		
 		}
 		public static void intro(){
+			enemyTeamName = GenerateSchedule.team.get(LeagueGameStart.opponentNumberCounter).getClubInitials();
+			enemyTeamNameFull = GenerateSchedule.team.get(LeagueGameStart.opponentNumberCounter).getClubName();
 			System.out.println("Hello and welcome to a match between " + GeneratePlayer.userTeamName + " and " + enemyTeamNameFull + ".");
 			delay();
 			System.out.println("And the teams are looking to kick off");
 			delay();
 			int counter = 1;
 		for (int y = 0; y < 2; y++){
-			for (int x = 0; x < (int)(Math.random()*6)+1; x++){
+			//for (int x = 0; x < (int)(Math.random()*6)+1; x++){
+			for (int x = 0; x < (int)(Math.random()*0)+0; x++){
 			longDelay();
 			
 			//if (){
@@ -468,15 +471,22 @@ public class Game
 					scoreboard();
 					if(userPoints > enemyPoints){
 						System.out.println(GeneratePlayer.userTeamName + " is victorious today taking down " + enemyTeamNameFull);
+						GenerateSchedule.team.get(GeneratePlayer.teamNumber-1).setPoints(GenerateSchedule.team.get(GeneratePlayer.teamNumber-1).getPoints()+3);
 					}
 					else if (userPoints == enemyPoints){
 						System.out.println("The game ended in a draw between " + GeneratePlayer.userTeamName + " and " + enemyTeamNameFull);
+						GenerateSchedule.team.get(GeneratePlayer.teamNumber-1).setPoints(GenerateSchedule.team.get(GeneratePlayer.teamNumber-1).getPoints()+1);
+						GenerateSchedule.team.get(LeagueGameStart.opponentNumberCounter).setPoints(GenerateSchedule.team.get(LeagueGameStart.opponentNumberCounter).getPoints()+1);
 					}
 					else {
 						System.out.println(enemyTeamNameFull + " ended up victorious taking down " + GeneratePlayer.userTeamName);
+						GenerateSchedule.team.get(LeagueGameStart.opponentNumberCounter).setPoints(GenerateSchedule.team.get(LeagueGameStart.opponentNumberCounter).getPoints()+3);
 					}
+					LeagueGameStart.opponentNumberCounter++;
+					OtherGameSimultor.runner();
 					}
 		}
+		LeagueGameStart.opponentNumberCounter++;
 				}
 			
 			//}
