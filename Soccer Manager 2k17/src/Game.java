@@ -57,7 +57,7 @@ public class Game
 				}
 			longDelay();
 		if (randomNumber > split){
-		//good team chance
+		//good team Chance
 			System.out.println("A chance for " + GenerateSchedule.team.get(GeneratePlayer.teamNumber-1).getClubName());
 			switch((int)(Math.random()*7)+1){
 			//for (int x = 0; x < (int)(Math.random()*0)+0; x++){

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import javax.swing.plaf.synth.SynthSpinnerUI;
-
+//a
 public class GeneratePlayer
 	{
 		static int teamOverall = 0;
@@ -46,6 +46,7 @@ public class GeneratePlayer
 			generatePlayer();
 			//SeasonView.runner();
 			}
+			//yes
 		}
 				public static void generatePlayer(){
 					for (int i = 0; i < 10; i++){

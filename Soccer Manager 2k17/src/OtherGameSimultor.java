@@ -1,4 +1,4 @@
-
+//a
 public class OtherGameSimultor {
 	public static void main(String[] args) {
 	}
