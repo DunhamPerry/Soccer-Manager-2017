@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.swing.plaf.synth.SynthSpinnerUI;
+
 public class GeneratePlayer
 	{
 		static int teamOverall = 0;
@@ -211,10 +213,7 @@ public class GeneratePlayer
 						System.out.printf("%-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s %-20s\n", position, player.getFirstName(), player.getLastName(), player.getOverall(), player.getPace(), player.getShooting(), player.getPassing(), player.getDribbling(), player.getDefending(), player.getPhysical());
 						delay();
 					}
-					teamOverall = teamOverall / 10;
-					if ((teamOverall%10) < 5) {
-						//GenerateSchedule.get(teamNumber-1).setClubOverall(teamOverall-(teamOverall%10));
-					}
+					teamOverall = teamOverall / 100;
 					Scanner userInput = new Scanner(System.in);
 					System.out.println("Are you ready to begin the season?");
 					System.out.println("1) Yes");

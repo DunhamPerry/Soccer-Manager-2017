@@ -17,17 +17,50 @@ public class Game
 			delay();
 			int counter = 1;
 		for (int y = 0; y < 2; y++){
-			//for (int x = 0; x < (int)(Math.random()*6)+1; x++){
-			for (int x = 0; x < (int)(Math.random()*0)+0; x++){
+			for (int x = 0; x < (int)(Math.random()*6)+1; x++){
+				int randomNumber = (int)(Math.random()*10)+1;
+				int split = 0;
+				switch(GenerateSchedule.team.get(GeneratePlayer.teamNumber-1).getClubOverall() - GenerateSchedule.team.get(LeagueGameStart.opponentNumberCounter).getClubOverall()) {
+				case -3:
+					split = 8;
+					break;
+				case -2:
+					split = 7;
+					break;
+				case -1:
+					split = 6;
+					break;
+				case 0:
+					split = 5;
+					break;
+				case 1:
+					split = 4;
+					break;
+				case 2:
+					split = 4;
+					break;
+				case 3:
+					split = 3;
+					break;
+				case 4:
+					split = 3;
+					break;
+				case 5:
+					split = 2;
+					break;
+				case 6: 
+					split = 2;
+					break;
+				case 7: 
+					split = 1;
+					break;
+				}
 			longDelay();
-			
-			//if (){
-				
-			//}
-			//else{
-				
-			//}
+		if (randomNumber > split){
+		//good team chance
+			System.out.println("A chance for " + GenerateSchedule.team.get(GeneratePlayer.teamNumber-1).getClubName());
 			switch((int)(Math.random()*7)+1){
+			//for (int x = 0; x < (int)(Math.random()*0)+0; x++){
 			//switch(7){
 				case 1:
 					//user striker shot outside the box
@@ -442,19 +475,12 @@ public class Game
 						}
 					}
 					break;
-				case 8:
-					//enemy shot outside box
-					System.out.println("Case 8");
-					break;
-				case 9:
-					//enemy dribble then cross
-					System.out.println("Case 9");
-					break;
-				case 10:
-					//enemy through ball
-					System.out.println("Case 10");
-					break;
 			}
+			}
+		else {
+			//enemy chance
+			System.out.println("A chance for " + enemyTeamNameFull);
+		}
 			}
 				if (counter == 1){
 				System.out.println("The referree whistles for the end of the first half");

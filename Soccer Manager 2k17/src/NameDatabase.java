@@ -7,7 +7,7 @@ public class NameDatabase
 				"Jack","Juan","James","Jose","Jeremy","Joel","Kyle","Kody","Karl","Kenneth","Kirk","Lorenzo","Lloyd","Larry","Leonard","Leif","Liam","Laurence","Matthew","Marco","Martin","Mike","Michael","Nick","Newton",
 				"Nicholas",	"Nigel","Nate","Neville","Oscar","Omar","Ozzie","Otto","Olaf","Oscar","Pablo","Patrick","Peter","Peyton","Philip","Pete","Ralph","Raymond","Rick","Richard","Robert","Rafael","Sebastien",
 				"Shane","Sam","Shawn","Stan","Sean","Simon","Teddy","Terence","Tomas","Thomas","Tony","Van","Toby","Victor","Tim","Vince","Timothy","Turner","Wilfred","Tyler","Walter","Tyson","William","Trip",
-				"Todd","Tod","Travis","Marc","Mark","Mario","Malloy","Mack","Max","Maxwell","Marty","Mat","Marcus","Mason","Mitch","Mitchell","Milo","Garrett","Gareth","George","Gibson",	"Gibbs","Gavin","Gregor","Gregory",	"Griffon"};
+				"Todd","Tod","Travis","Marc","Mark","Mario","Malloy","Burke","Mack","Max","Maxwell","Marty","Mat","Marcus","Mason","Mitch","Mitchell","Milo","Garrett","Gareth","George","Gibson",	"Gibbs","Gavin","Gregor","Gregory",	"Griffon"};
 		
 		static String[]lastNameArray = { "Abbott",
 				"Acevedo","Acosta","Adams","Adkins","Aguilar","Aguirre","Albert","Alexander","Alford","Allen","Allison","Alston","Alvarado","Alvarez","Anderson","Andrews","Anthony","Armstrong","Arnold","Ashley","Atkins",

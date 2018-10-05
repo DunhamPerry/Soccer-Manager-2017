@@ -1,7 +1,6 @@
 
 public class LeagueGameStart
 	{
-		static int enemyTeam;
 		static int opponentNumberCounter = 0;
 		static int gamesPlayed = 0;
 		static boolean hasDoneAdder = false;
@@ -20,7 +19,6 @@ public class LeagueGameStart
 			}
 		}
 		public static void gameRunner(){
-			System.out.println(LeagueGameStart.opponentNumberCounter);
 			int adder = 0;
 			if (gamesPlayed == 3){
 				playoffGame();

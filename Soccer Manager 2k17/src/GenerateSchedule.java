@@ -2,7 +2,6 @@ import java.util.ArrayList;
 
 public class GenerateSchedule {
 	static ArrayList<LeagueTeams> team = new ArrayList<LeagueTeams>();
-	static ArrayList<EuropaTeams> ContinentalTeam = new ArrayList<EuropaTeams>();
 	
 	public static void main(String[] args) {
 		generateTeams();
@@ -36,7 +35,7 @@ public class GenerateSchedule {
 		team.add(new LeagueTeams("England", 8, 0, "ENG", 1, "G", false));
 		team.add(new LeagueTeams("Tunisia", 2, 0, "TUN", 1, "G", false));
 		team.add(new LeagueTeams("Panama", 2, 0, "PAN", 1, "G", false));
-		team.add(new LeagueTeams("Colombia", 797, 0, "COL", 1, "H", false));
+		team.add(new LeagueTeams("Colombia", 8, 0, "COL", 1, "H", false));
 		team.add(new LeagueTeams("Japan", 6, 0, "JAP", 1, "H", false));
 		team.add(new LeagueTeams("Senegal", 7, 0, "SEN", 1, "H", false));
 		team.add(new LeagueTeams("Poland", 7, 0, "POL", 1, "H", false));
