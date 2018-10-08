@@ -33,8 +33,7 @@ public class OtherGameSimultor {
 		System.out.println("|------------------------------------------------|");
 		for (int i = 0; i < 8; i++) {
 			for (int x = 0; x < 2; x++) {
-				if (gameNumber1 == GeneratePlayer.teamNumber - 1 || gameNumber1 == GeneratePlayer.teamNumber - 1) {
-
+				if (gameNumber1 == GeneratePlayer.teamNumber - 1 || gameNumber2 == GeneratePlayer.teamNumber - 1) {
 				} else {
 					int randomNumber = (int) (Math.random() * 10) + 1;
 					int low = 0;
@@ -160,18 +159,27 @@ public class OtherGameSimultor {
 		int firstSpot = 0;
 		int secondSpot = 1;
 		int first = 0;
+		int second = 0;
 		for (int i = 0; i < 8; i++) {
-			for (int second = 0; second < 4; second++) {
+			for (int x = 0; x < 4; x++) {
 				if (GenerateSchedule.team.get(firstSpot).getPoints() < GenerateSchedule.team.get(second).getPoints()) {
+					secondSpot = firstSpot;
 					firstSpot = second;
-					secondSpot = first;
-					first = second;
-				} else if (GenerateSchedule.team.get(second).getPoints() > GenerateSchedule.team.get(secondSpot)
-						.getPoints()) {
-
 				}
+				else if (second % 4 == 0){						
+				}
+				else if (GenerateSchedule.team.get(second).getPoints() > GenerateSchedule.team.get(secondSpot).getPoints()){
+						secondSpot = second;
+				}
+				second++;
 			}
+			playoffTeams.add(firstSpot);
+			playoffTeams.add(secondSpot);
+			first = first + 4;
+			firstSpot = first;
+			secondSpot = first + 1;
 		}
+		Bracket.bracketCreator();
 	}
 
 }

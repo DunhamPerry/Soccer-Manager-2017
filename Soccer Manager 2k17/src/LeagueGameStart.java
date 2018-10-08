@@ -101,7 +101,7 @@ public class LeagueGameStart
 			Game.intro();
 		}
 		private static void playoffGame(){
-			System.out.println("YEET");
+			OtherGameSimultor.endOfGroupStage();
 		}
 
 	}
