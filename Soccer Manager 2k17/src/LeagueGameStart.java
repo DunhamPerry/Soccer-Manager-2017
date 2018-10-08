@@ -20,7 +20,7 @@ public class LeagueGameStart
 		}
 		public static void gameRunner(){
 			int adder = 0;
-			if (gamesPlayed == 3){
+			if (gamesPlayed > 2){
 				playoffGame();
 			}
 			if (hasDoneAdder == false) {
@@ -47,14 +47,55 @@ public class LeagueGameStart
 						break;
 					case "H":
 						adder = 28;
-						break;
+					break;
 				}
 				opponentNumberCounter = opponentNumberCounter + adder;
 				hasDoneAdder = true;
-				gameRunner();
 			}
-			if (GenerateSchedule.team.get(opponentNumberCounter).isPlayer() == true){
-				opponentNumberCounter++;
+			
+			if (GeneratePlayer.teamNumber % 4 == 1) {
+					opponentNumberCounter++;
+			}
+			else if (GeneratePlayer.teamNumber % 4 == 2) {
+				switch (gamesPlayed) {
+				case 0:
+					break;
+				case 1:
+					opponentNumberCounter = opponentNumberCounter + 3;
+					break;
+				case 2:
+					opponentNumberCounter = opponentNumberCounter - 1;
+					break;
+				}
+			}
+			else if (GeneratePlayer.teamNumber % 4 == 3) {
+				switch (gamesPlayed) {
+				case 0:
+					opponentNumberCounter = opponentNumberCounter + 3;
+					break;
+				case 1:
+					opponentNumberCounter = opponentNumberCounter - 3;
+					break;
+				case 2:
+					opponentNumberCounter = opponentNumberCounter + 1;
+					break;
+				}
+			}
+			else {
+				switch (gamesPlayed) {
+				case 0:
+					System.out.println("Check");
+					opponentNumberCounter = opponentNumberCounter + 2;
+					break;
+				case 1:
+					System.out.println("Check");
+					opponentNumberCounter = opponentNumberCounter - 1;
+					break;
+				case 2:
+					System.out.println("Check");
+					opponentNumberCounter = opponentNumberCounter - 1;
+					break;
+				}
 			}
 			gamesPlayed++;
 			Game.intro();
@@ -64,3 +105,7 @@ public class LeagueGameStart
 		}
 
 	}
+		//1-234
+		//2-143
+		//3-412
+		//4-321

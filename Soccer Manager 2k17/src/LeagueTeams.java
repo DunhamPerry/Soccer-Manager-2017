@@ -8,8 +8,10 @@ public class LeagueTeams{
 		private int round;
 		private String group;
 		private boolean player;
+		private String starPlayerOne;
+		private String starPlayerTwo;
 
-	public LeagueTeams(String cn, int co, int p, String ci, int r, String g, boolean pl){
+	public LeagueTeams(String cn, int co, int p, String ci, int r, String g, boolean pl, String spo, String spt){
 		clubName = cn;
 		clubOverall = co;
 		points = p;
@@ -17,6 +19,8 @@ public class LeagueTeams{
 		round = r;
 		group = g;
 		player = pl;
+		starPlayerOne = spo;
+		starPlayerTwo = spt;
 }
 
 	public String getClubName()
@@ -99,5 +103,21 @@ public class LeagueTeams{
 		{
 			this.clubInitials = clubInitials;
 		}
+
+	public String getStarPlayerOne() {
+		return starPlayerOne;
+	}
+
+	public void setStarPlayerOne(String starPlayerOne) {
+		this.starPlayerOne = starPlayerOne;
+	}
+
+	public String getStarPlayerTwo() {
+		return starPlayerTwo;
+	}
+
+	public void setStarPlayerTwo(String starPlayerTwo) {
+		this.starPlayerTwo = starPlayerTwo;
+	}
 
 }
