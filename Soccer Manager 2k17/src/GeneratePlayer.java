@@ -33,7 +33,6 @@ public class GeneratePlayer
 			teamNumber = userInput.nextInt();
 			GenerateSchedule.team.get(teamNumber-1).setPlayer(true);
 			userTeamName = GenerateSchedule.team.get(teamNumber-1).getClubName();
-			System.out.println(userTeamName);
 			System.out.println("Welcome to " + userTeamName);
 			System.out.println("Are You Ready to Pick a Roster?");
 			System.out.println("1) YES");
@@ -90,8 +89,8 @@ public class GeneratePlayer
 					String[]position = {"Left Back", "Center Back", "Center Back", "Right Back", "Center Defensive Midfielder", "Center Defensive Midfielder", "Left Attacking Midfielder", "Center Attacking Midfielder", "Right Attacking Midfielder", "Striker"};
 					System.out.println("Pick a " + position[pickPosition]);
 					Scanner userInput = new Scanner(System.in);
-					//int playerDraft = userInput.nextInt();
-					int playerDraft = 1;
+					int playerDraft = userInput.nextInt();
+					//int playerDraft = 1;
 					Roster.add(new TeamPlayer(draftPicks.get(playerDraft - 1).getFirstName(), draftPicks.get(playerDraft - 1).getLastName(), pickPosition + 1, draftPicks.get(playerDraft - 1).getOverall(),draftPicks.get(playerDraft - 1).getPace(), draftPicks.get(playerDraft - 1).getShooting(), draftPicks.get(playerDraft - 1).getPassing(), draftPicks.get(playerDraft - 1).getDribbling(), draftPicks.get(playerDraft - 1).getDefending(), draftPicks.get(playerDraft - 1).getPhysical()));
 					draftPicks.clear();
 					pickPosition++;

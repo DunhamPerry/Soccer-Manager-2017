@@ -3,7 +3,8 @@ import java.util.ArrayList;
 //a
 public class OtherGameSimultor {
 	static ArrayList<Integer> playoffTeams = new ArrayList<Integer>();
-
+	static boolean elimintated = false;
+	
 	public static void main(String[] args) {
 	}
 
@@ -178,6 +179,17 @@ public class OtherGameSimultor {
 			first = first + 4;
 			firstSpot = first;
 			secondSpot = first + 1;
+		}
+		boolean qualified = false;
+		for (int i = 0; i < 16; i++) {
+			if ((GeneratePlayer.teamNumber-1) == playoffTeams.get(i)) {
+				System.out.println("Congratulations, your team qualified from the group stage to the knockout rounds!");
+				qualified = true;
+			}
+		}
+		if (qualified == false) {
+			elimintated = true;
+			System.out.println("Your team was eliminated from the group stages");
 		}
 		Bracket.bracketCreator();
 	}

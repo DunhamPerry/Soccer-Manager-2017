@@ -16,11 +16,14 @@ public class SeasonView
 			Scanner userInput = new Scanner(System.in);
 			System.out.println();
 			System.out.println("What do you want to do?");
+			if (LeagueGameStart.gamesPlayed == 3) {
+			System.out.println("1) ADVANCE TO NEXT ROUND");
+			}
+			else {
 			System.out.println("1) NEXT GAME");
+			}
 			System.out.println("2) ROSTER");
 			System.out.println("3) STANDINGS");
-			//System.out.println("5) Look at the League Cup Standings");
-			//System.out.println("6) Look at the Europa Cup Standings");
 			int userAnswer = userInput.nextInt();
 			switch(userAnswer){
 				case 1:

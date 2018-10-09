@@ -17,8 +17,8 @@ public class Game
 			delay();
 			int counter = 1;
 		for (int y = 0; y < 2; y++){
-			//for (int x = 0; x < (int)(Math.random()*6)+1; x++){
-			for (int x = 0; x < (int)(Math.random()*0)+0; x++){
+			for (int x = 0; x < (int)(Math.random()*6)+1; x++){
+			//for (int x = 0; x < (int)(Math.random()*0)+0; x++){
 				int randomNumber = (int)(Math.random()*10)+1;
 				int split = 0;
 				switch(GenerateSchedule.team.get(GeneratePlayer.teamNumber-1).getClubOverall() - GenerateSchedule.team.get(LeagueGameStart.opponentNumberCounter).getClubOverall()) {
@@ -240,7 +240,7 @@ public class Game
 					else if (GeneratePlayer.Roster.get(9).getShooting() < (Math.random()*90)+10){
 						System.out.println("The ball starts flying towards a corner!");
 						delay();
-						System.out.println("It hits the net and bounces away! No goal!");
+						System.out.println("It hits the post and bounces away! No goal!");
 						delay();
 						scoreboard();
 					}
@@ -660,7 +660,7 @@ public class Game
 					else if (GeneratePlayer.Roster.get(9).getShooting() < (Math.random()*90)+10){
 						System.out.println("The ball starts flying towards a corner!");
 						delay();
-						System.out.println("It hits the net and bounces away! No goal!");
+						System.out.println("It hits the post and bounces away! No goal!");
 						delay();
 						scoreboard();
 					}
@@ -956,7 +956,7 @@ public class Game
 		{
         try
 				{
-				Thread.sleep(6000);
+				Thread.sleep(3000);
 				} catch (InterruptedException e) {
 				}
 		}

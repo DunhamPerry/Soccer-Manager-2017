@@ -84,15 +84,12 @@ public class LeagueGameStart
 			else {
 				switch (gamesPlayed) {
 				case 0:
-					System.out.println("Check");
 					opponentNumberCounter = opponentNumberCounter + 2;
 					break;
 				case 1:
-					System.out.println("Check");
 					opponentNumberCounter = opponentNumberCounter - 1;
 					break;
 				case 2:
-					System.out.println("Check");
 					opponentNumberCounter = opponentNumberCounter - 1;
 					break;
 				}
