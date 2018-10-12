@@ -1,7 +1,11 @@
 import java.util.ArrayList;
 
 public class Bracket {
+	static int userTeamBracketPosition;
 	static ArrayList<Integer> bracket = new ArrayList<Integer>();
+	static ArrayList<Integer> quaterFinal = new ArrayList<Integer>();
+	static ArrayList<Integer> semiFinal = new ArrayList<Integer>();
+	static ArrayList<Integer> Final = new ArrayList<Integer>();
 
 	public static void main(String[] args) {
 	}
@@ -24,10 +28,17 @@ public class Bracket {
 			firstAdder = -1;
 			secondAdder = 5;
 		}
-		bracketPrinter();
-
+		userTeamFinder();
 	}
-
+	private static void userTeamFinder() {
+		for (int i = 0; i < bracket.size(); i++) {
+			if ((GeneratePlayer.teamNumber-1) == bracket.get(i)) {
+				userTeamBracketPosition = i;
+			}
+		}
+		System.out.println(userTeamBracketPosition);
+		bracketPrinter();
+	}
 	private static void bracketPrinter() {
 		System.out.println("                                                                                         ");
 		System.out.printf("%-11s %-71s %-11s\n", GenerateSchedule.team.get(bracket.get(0)).getClubName(),"                                                                                            ", GenerateSchedule.team.get(bracket.get(8)).getClubName());
@@ -46,7 +57,6 @@ public class Bracket {
 		System.out.println("------------             |                                                                |             ------------");
 		System.out.printf("%-11s %-71s %-11s\n", GenerateSchedule.team.get(bracket.get(7)).getClubName(),"|------------                                                                  ------------|", GenerateSchedule.team.get(bracket.get(15)).getClubName());
 		System.out.println("------------                                                                                            ------------");
-		System.exit(0);
 		SeasonView.menu();
 	}
 

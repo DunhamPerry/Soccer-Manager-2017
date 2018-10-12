@@ -104,8 +104,14 @@ public class LeagueGameStart
 			OtherGameSimultor.endOfGroupStage();
 			}
 			else {
-				
+				if (Bracket.userTeamBracketPosition % 2 == 0) {
+					opponentNumberCounter = Bracket.bracket.get(Bracket.userTeamBracketPosition + 1);
+				}
+				else {
+					opponentNumberCounter = Bracket.bracket.get(Bracket.userTeamBracketPosition - 1);
+				}
 			}
+			Game.intro();
 		}
 
 	}

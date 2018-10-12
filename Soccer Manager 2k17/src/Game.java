@@ -1,10 +1,11 @@
 
 public class Game
 	{
-		static int userPoints = 0;
+		static int userPoints = 1;
 		static int enemyPoints = 0;
 		static String enemyTeamName;
 		static String enemyTeamNameFull;
+		static boolean playoffGame = false;
 		public static void main(String[] args){
 		
 		}
@@ -17,8 +18,8 @@ public class Game
 			delay();
 			int counter = 1;
 		for (int y = 0; y < 2; y++){
-			for (int x = 0; x < (int)(Math.random()*6)+1; x++){
-			//for (int x = 0; x < (int)(Math.random()*0)+0; x++){
+			//for (int x = 0; x < (int)(Math.random()*6)+1; x++){
+			for (int x = 0; x < (int)(Math.random()*0)+0; x++){
 				int randomNumber = (int)(Math.random()*10)+1;
 				int split = 0;
 				switch(GenerateSchedule.team.get(GeneratePlayer.teamNumber-1).getClubOverall() - GenerateSchedule.team.get(LeagueGameStart.opponentNumberCounter).getClubOverall()) {
@@ -912,16 +913,31 @@ public class Game
 					scoreboard();
 					if(userPoints > enemyPoints){
 						System.out.println(GeneratePlayer.userTeamName + " is victorious today taking down " + enemyTeamNameFull);
+						if (playoffGame == false) {
 						GenerateSchedule.team.get(GeneratePlayer.teamNumber-1).setPoints(GenerateSchedule.team.get(GeneratePlayer.teamNumber-1).getPoints()+3);
+						}
+						else {
+							
+						}
 					}
 					else if (userPoints == enemyPoints){
 						System.out.println("The game ended in a draw between " + GeneratePlayer.userTeamName + " and " + enemyTeamNameFull);
+						if (playoffGame == false) {
 						GenerateSchedule.team.get(GeneratePlayer.teamNumber-1).setPoints(GenerateSchedule.team.get(GeneratePlayer.teamNumber-1).getPoints()+1);
 						GenerateSchedule.team.get(LeagueGameStart.opponentNumberCounter).setPoints(GenerateSchedule.team.get(LeagueGameStart.opponentNumberCounter).getPoints()+1);
+						}
+						else {
+							
+						}
 					}
 					else {
 						System.out.println(enemyTeamNameFull + " ended up victorious taking down " + GeneratePlayer.userTeamName);
+						if (playoffGame == false) {
 						GenerateSchedule.team.get(LeagueGameStart.opponentNumberCounter).setPoints(GenerateSchedule.team.get(LeagueGameStart.opponentNumberCounter).getPoints()+3);
+						}
+						else {
+							
+						}
 					}
 					userPoints = 0;
 			        enemyPoints = 0;
@@ -948,7 +964,8 @@ public class Game
 		public static void delay()
 			{
 					try {
-						Thread.sleep(1500);
+						//Thread.sleep(1500);
+						Thread.sleep(0);
 					} catch (InterruptedException e) {
 					}
 			}
@@ -956,7 +973,8 @@ public class Game
 		{
         try
 				{
-				Thread.sleep(3000);
+				//Thread.sleep(3000);
+        		Thread.sleep(0);
 				} catch (InterruptedException e) {
 				}
 		}

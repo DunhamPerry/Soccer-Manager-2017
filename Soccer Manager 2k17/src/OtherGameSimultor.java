@@ -185,6 +185,8 @@ public class OtherGameSimultor {
 			if ((GeneratePlayer.teamNumber-1) == playoffTeams.get(i)) {
 				System.out.println("Congratulations, your team qualified from the group stage to the knockout rounds!");
 				qualified = true;
+				Game.playoffGame = true;
+				Bracket.userTeamBracketPosition = i;
 			}
 		}
 		if (qualified == false) {
