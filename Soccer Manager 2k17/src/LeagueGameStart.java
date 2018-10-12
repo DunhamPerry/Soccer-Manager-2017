@@ -4,6 +4,7 @@ public class LeagueGameStart
 		static int opponentNumberCounter = 0;
 		static int gamesPlayed = 0;
 		static boolean hasDoneAdder = false;
+		static boolean bracketCheck = false;
 		public static void main(String[] args)
 			{
 				//otherTeamPoints();
@@ -98,7 +99,13 @@ public class LeagueGameStart
 			Game.intro();
 		}
 		private static void playoffGame(){
+			if (bracketCheck == false) {
+				bracketCheck = true;
 			OtherGameSimultor.endOfGroupStage();
+			}
+			else {
+				
+			}
 		}
 
 	}

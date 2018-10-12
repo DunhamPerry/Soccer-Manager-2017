@@ -47,6 +47,7 @@ public class Bracket {
 		System.out.printf("%-11s %-71s %-11s\n", GenerateSchedule.team.get(bracket.get(7)).getClubName(),"|------------                                                                  ------------|", GenerateSchedule.team.get(bracket.get(15)).getClubName());
 		System.out.println("------------                                                                                            ------------");
 		System.exit(0);
+		SeasonView.menu();
 	}
 
 }
