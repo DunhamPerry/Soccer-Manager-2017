@@ -18,8 +18,8 @@ public class Game
 			delay();
 			int counter = 1;
 		for (int y = 0; y < 2; y++){
-			//for (int x = 0; x < (int)(Math.random()*6)+1; x++){
-			for (int x = 0; x < (int)(Math.random()*0)+0; x++){
+			for (int x = 0; x < (int)(Math.random()*6)+1; x++){
+			//for (int x = 0; x < (int)(Math.random()*0)+0; x++){
 				int randomNumber = (int)(Math.random()*10)+1;
 				int split = 0;
 				switch(GenerateSchedule.team.get(GeneratePlayer.teamNumber-1).getClubOverall() - GenerateSchedule.team.get(LeagueGameStart.opponentNumberCounter).getClubOverall()) {
@@ -964,8 +964,8 @@ public class Game
 		public static void delay()
 			{
 					try {
-						//Thread.sleep(1500);
-						Thread.sleep(0);
+						Thread.sleep(1500);
+						//Thread.sleep(0);
 					} catch (InterruptedException e) {
 					}
 			}
@@ -973,8 +973,8 @@ public class Game
 		{
         try
 				{
-				//Thread.sleep(3000);
-        		Thread.sleep(0);
+				Thread.sleep(3000);
+        		//Thread.sleep(0);
 				} catch (InterruptedException e) {
 				}
 		}
